@@ -17,7 +17,12 @@ class Install
     public function __invoke()
     {
         return new HtmlResponse(
-            $this->renderer->render('installer::install')
+            $this->renderer->render(
+                'installer::welcome',
+                [
+                    'layout' => 'installer::layout'
+                ]
+            )
         );
     }
 }
