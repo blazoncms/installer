@@ -1,0 +1,25 @@
+{
+    "name": "blazoncms/installer",
+    "description": "Installer package for the Blazon CMS",
+    "type": "library",
+    "homepage": "https://github.com/blazoncms/installer",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Westin Shafer",
+            "email": "shafer_w2002@yahoo.com"
+        }
+    ],
+    "require": {
+        "blazoncms/core": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8",
+        "squizlabs/php_codesniffer": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "BlazonCms\\Installer\\": "src"
+        }
+    }
+}
