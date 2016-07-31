@@ -31,6 +31,14 @@
     "extra": {
         "zf": {
             "config-provider": "BlazonCms\\Installer\\Module"
+        },
+        "component": {
+            "scripts": [
+                "js/installer.js"
+            ],
+            "styles": [
+                "css/installer.css"
+            ]
         }
     }
 }
