@@ -1,0 +1,29 @@
+<?php
+$this->headLink()->prependStylesheet('/bower-asset/dist/css/bootstrap.min.css');
+
+$this->inlineScript()->prependFile(
+    '/bower-asset/jquery/dist/jquery.min.js'
+);
+
+$this->inlineScript()->appendFile(
+    '/bower-asset/tether/dist/tether.min.js'
+);
+
+$this->inlineScript()->appendFile(
+    '/bower-asset/bootstrap/js/bootstrap.min.js'
+);
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <?php echo $this->headTitle('BlazonCMS Installer')->setSeparator(' - ')->setAutoEscape(false) ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <?php echo $this->headMeta(); ?>
+    <?php echo $this->headLink(); ?>
+</head>
+<body>
+    <?php echo $this->inlineScript(); ?>
+</body>
+</html>
