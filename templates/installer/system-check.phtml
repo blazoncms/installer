@@ -1,0 +1,87 @@
+<h2>System Check</h2>
+<br />
+<p>
+    Checking For Needed Directories...
+</p>
+
+<?php if ($this->missing) : ?>
+    <div class="alert alert-danger">
+        <strong>
+            Missing Directories!
+        </strong>
+        <br/>
+        Some directories needed by the system are missing and we were not able to create them automatically.
+        <br />
+        <br />
+        Please create the following directories:
+        <br />
+        <div style="padding-left: 2em;">
+            <?php foreach ($this->missing as $missing) :?>
+                <?= $missing; ?><br/>
+            <?php endforeach; ?>
+        </div>
+    </div>
+<?php else: ?>
+    <div class="alert alert-success">
+        Ok.
+    </div>
+<?php endif; ?>
+
+
+<br />
+<p>
+    Checking Directory Permissions...
+</p>
+
+<?php if ($this->missingPermissions) : ?>
+    <div class="alert alert-danger">
+        <strong>
+            Unable to write to directories!
+        </strong>
+        <br/>
+        Please make sure the following directories are present and that the web user can write to these folders.
+        <br />
+        <br />
+        Directories:
+        <br />
+        <div style="padding-left: 2em;">
+            <?php foreach ($this->missingPermissions as $missingPermissions) :?>
+                <?= $missingPermissions; ?><br/>
+            <?php endforeach; ?>
+        </div>
+    </div>
+<?php else: ?>
+    <div class="alert alert-success">
+        Ok.
+    </div>
+<?php endif; ?>
+
+
+<br />
+<p>
+    Checking Installed Modules...
+</p>
+
+<?php if ($this->missingModules) : ?>
+    <div class="alert alert-danger">
+        <strong>
+            Unable to locate needed ZF2 Modules!
+        </strong>
+        <br/>
+        Please make sure the following ZF2 modules are installed and added to the application.config.php file.
+        <br />
+        <br />
+        Directories:
+        <br />
+        <div style="padding-left: 2em;">
+            <?php foreach ($this->missingModules as $missingModule) :?>
+                <?= $missingModule; ?><br/>
+            <?php endforeach; ?>
+        </div>
+    </div>
+<?php else: ?>
+    <div class="alert alert-success">
+        Ok.
+    </div>
+<?php endif; ?>
+
